@@ -126,6 +126,16 @@ body {
     color: #000;
 }
 
+.nav-links li:hover .dropdown {
+    display: block; /* Ensure the dropdown appears on hover */
+}
+
+.dropdown-menu {
+    display: none; /* Hide dropdown by default */
+    position: absolute; /* Position dropdown correctly */
+    z-index: 1000; /* Bring dropdown in front */
+}
+
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -156,7 +166,6 @@ body {
 .hero-content p {
     font-size: 18px;
     margin-bottom: 40px;
-    align-content: center;
     padding: 0px 300px;
 }
 
@@ -188,51 +197,33 @@ body {
     text-decoration: none;
     border-radius: 5px;
     font-size: 18px;
-    display: inline-block;
-    transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-    background-color: #0056b3;
+/* 404 Page Styles */
+.hero-content h1 {
+    font-size: 64px;
 }
 
-/* General Styles for Search Bar */
 .search-container {
-    margin-bottom: 20px; /* Space between search bar and home button */
-    display: flex;
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-    align-content: center;
-    border-radius: 5px;
-    border: 2px solid #007bff;
-    background-color: #fff;
-    padding: 5px 10px;
+    margin-top: 20px;
 }
 
-.search-container input {
-    font-size: 16px;
-    outline: none;
-    width: 300px; /* Adjust width as needed */
-    border: none;
+.search-container input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .search-container button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
+    padding: 10px 15px;
+    margin-left: 5px;
     border: none;
+    background-color: #007bff;
+    color: white;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .search-container button:hover {
     background-color: #0056b3;
-}
-
-/* Remove border from input when it is active (focused) */
-input:focus, textarea:focus {
-    border: none; /* Removes the border */
-    outline: none; /* Optional: Remove outline if needed */
 }

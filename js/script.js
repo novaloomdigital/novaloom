@@ -1,57 +1,39 @@
-// Change header style on scroll
-window.addEventListener("scroll", function () {
-    var header = document.querySelector(".header");
-    if (window.scrollY > 50) {
-        header.classList.add("scrolled");
+// JavaScript for Typewriter Effect
+const typewriter = document.querySelector('.typewriter');
+const words = ["Creativity", "Innovation", "Strategy"];
+let index = 0;
+
+function typeWord() {
+    typewriter.textContent = words[index].substring(0, typewriter.textContent.length + 1);
+    if (typewriter.textContent.length === words[index].length) {
+        setTimeout(() => {
+            index = (index + 1) % words.length;
+            setTimeout(() => {
+                typewriter.textContent = "";
+                typeWord();
+            }, 2000); // Wait for 2 seconds before deleting
+        }, 1000); // Wait for 1 second before moving to the next word
     } else {
-        header.classList.remove("scrolled");
-    }
-});
-
-// Continuous Typewriter Effect
-const text = "Tangible Results for Growth"; // Text to display
-let i = 0; // Initial character index
-let isDeleting = false; // Flag for deleting characters
-const speed = 75; // Speed in milliseconds
-const pauseTime = 250; // Time to pause before starting to delete
-
-function typeWriter() {
-    const typewriterElement = document.querySelector('.typewriter');
-
-    if (isDeleting) {
-        // Remove a character
-        typewriterElement.innerHTML = text.substring(0, i);
-        i--;
-
-        if (i < 0) {
-            // When all characters are deleted, start typing again after a pause
-            isDeleting = false;
-            setTimeout(typeWriter, pauseTime);
-        } else {
-            setTimeout(typeWriter, speed); // Continue deleting
-        }
-    } else {
-        // Add a character
-        typewriterElement.innerHTML = text.substring(0, i);
-        i++;
-
-        if (i > text.length) {
-            // Start deleting when the entire text is displayed
-            isDeleting = true;
-            setTimeout(typeWriter, pauseTime);
-        } else {
-            setTimeout(typeWriter, speed); // Continue adding
-        }
+        setTimeout(typeWord, 200); // Adjust typing speed
     }
 }
 
 // Start the typewriter effect
-typeWriter();
+typeWord();
 
-// Mobile Navigation Toggle
+// Change navbar background on scroll
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('.header');
+    if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+    } else {
+        header.classList.remove('scrolled');
+    }
+});
+
+// Toggle mobile navigation
 const navToggle = document.getElementById('nav-toggle');
-const navLinks = document.querySelector('.nav-links');
-
-navToggle.addEventListener('click', function () {
-    navLinks.classList.toggle('show');
+navToggle.addEventListener('click', () => {
+    const navLinks = document.querySelector('.mobnav');
+    navLinks.classList.toggle('active');
 });
