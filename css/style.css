@@ -172,3 +172,67 @@ body {
 .btn-learn-more:hover {
     background-color: #0056b3;
 }
+
+/* Footer */
+.footer {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* General Styles for Search Bar */
+.search-container {
+    margin-bottom: 20px; /* Space between search bar and home button */
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 5px;
+    border: 2px solid #007bff;
+    background-color: #fff;
+    padding: 5px 10px;
+}
+
+.search-container input {
+    font-size: 16px;
+    outline: none;
+    width: 300px; /* Adjust width as needed */
+    border: none;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Remove border from input when it is active (focused) */
+input:focus, textarea:focus {
+    border: none; /* Removes the border */
+    outline: none; /* Optional: Remove outline if needed */
+}

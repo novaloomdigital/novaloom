@@ -49,9 +49,9 @@ function typeWriter() {
 typeWriter();
 
 // Mobile Navigation Toggle
-const navToggle = document.getElementById("nav-toggle");
-const navLinks = document.querySelector(".mobnav");
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.querySelector('.nav-links');
 
-navToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active"); // Toggle active class to show/hide links
+navToggle.addEventListener('click', function () {
+    navLinks.classList.toggle('show');
 });
