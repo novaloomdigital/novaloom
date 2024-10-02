@@ -1,0 +1,174 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+}
+
+/* Navigation Bar */
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: transparent;
+}
+
+.cmw {
+    max-width: 1400px;
+    margin: 0 auto; /* Center the div */
+    display: flex; /* Use flexbox for alignment */
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    width: 100%;
+}
+
+/* Styles for the nav toggle (hamburger icon) */
+.nav-toggle {
+    display: none; /* Hide toggle by default */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.header.scrolled {
+    background-color: rgb(255, 255, 255);
+    transition: background-color 0.5s ease-in;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.header.scrolled .logo {
+    color: #000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center; /* Center items vertically */
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.header.scrolled .nav-links a {
+    color: #000;
+}
+
+.nav-buttons {
+    display: flex;
+    align-items: center;
+}
+
+.nav-buttons .search-icon {
+    font-size: 20px;
+    color: #fff;
+    margin-right: 20px;
+    transition: color 0.3s ease;
+}
+
+.nav-buttons .search-icon:hover {
+    color: #007bff;
+}
+
+.header.scrolled .search-icon {
+    color: #000;
+}
+
+.nav-buttons .btn {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-left: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-buttons .btn-signup {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.nav-buttons .btn:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.header.scrolled .btn {
+    border-color: #000;
+    color: #000;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #000;
+}
+
+.hero-content h1 {
+    font-size: 64px;
+    margin-bottom: 20px;
+    padding: 0px 150px;
+}
+
+/* Optional: If you want to blink a cursor */
+.typewriter::after {
+    content: '|';
+    display: inline-block;
+    animation: blink 0.75s step-start infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    align-content: center;
+    padding: 0px 300px;
+}
+
+.btn-learn-more {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.btn-learn-more:hover {
+    background-color: #0056b3;
+}
