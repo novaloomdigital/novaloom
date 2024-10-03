@@ -11,6 +11,10 @@ body {
     color: #fff;
 }
 
+header {
+    margin-bottom: 100px;
+}
+
 /* Navigation Bar */
 .header {
     position: fixed;
@@ -19,7 +23,6 @@ body {
     z-index: 1000;
     transition: background-color 0.3s ease, color 0.3s ease;
     background-color: transparent;
-    margin-bottom: 50px;
 }
 
 .cmw {
@@ -239,4 +242,8 @@ body {
 .search-input:focus {
     border: none; /* Remove the border */
     outline: none; /* Optional: Remove outline */
+}
+
+footer {
+    margin-top: 50px;
 }
