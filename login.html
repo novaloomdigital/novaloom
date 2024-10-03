@@ -3,9 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign In</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" media="screen and (min-width: 933px)" href="assets/css/style.css">
+    <link rel="stylesheet" media="screen and (min-width: 430px) and (max-width: 932px)" href="assets/css/tabstyle.css">
+    <link rel="stylesheet" media="screen and (max-width: 429px)" href="assets/css/mobstyle.css">
 </head>
 <body>
-    
+<main>
+    <!-- Login Container -->
+    <section class="login-container" id="particles-js-background">
+        <h2>Login</h2>
+        <form id="loginForm" onsubmit="return validateLogin()">
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username">
+            </div>
+            <div class="input-group password-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+                <span class="toggle-password" onclick="togglePassword()">
+                    <i id="eyeIcon" class="fas fa-eye"></i>
+                </span>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox" id="rememberMe"> Remember Me</label>
+                <a href="/password-reset.html" class="forgot-password">Forgot Password?</a>
+            </div>
+            <div class="input-group">
+                <button type="submit" class="login-btn">Login</button>
+            </div>
+            <div class="register-link"><p>Don't have an account? <a href="/register.html">Register</a></p></div>
+            <p id="error-message"></p>
+        </form>
+    </section>
+</main>
+
+<!-- JavaScript File -->
+<script type="text/javascript" src="assets/js/script.js"></script>
+<!-- To Show Particle in Background -->
+<style>
+    .particles-js-canvas-el {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left:0;
+    }
+</style>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script type="text/javascript" src="assets/js/particles.js"></script>
 </body>
 </html>

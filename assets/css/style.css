@@ -97,38 +97,48 @@ header {
 }
 
 .nav-buttons .search-icon:hover {
-    color: #007bff;
+    color: #000CB7;
 }
 
 .header.scrolled .search-icon {
     color: #000;
 }
 
-.nav-buttons .btn {
-    background-color: transparent;
-    border: 2px solid #fff;
-    color: #fff;
+button, .btn, .btn1, .btn2:hover {
+    border: 2px solid;
     padding: 10px 20px;
+    color: #fff;
     text-decoration: none;
-    margin-left: 10px;
-    border-radius: 5px;
+    border-radius: 100px;
+    background-color: #000CB7;
+    border-color: #000CB7;
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-.nav-buttons .btn-signup {
-    background-color: #007bff;
-    border-color: #007bff;
+.btn2, button:hover, .btn:hover, .btn1:hover {
+    border: 2px solid;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 100px;
+    background-color: transparent;
+    border-color: #fff;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-.nav-buttons .btn:hover {
-    background-color: #fff;
-    color: #000;
+.header.scrolled .nav-buttons .btn1, .header.scrolled .nav-buttons .btn2:hover {
+    background-color: #000CB7;
+    border-color: #000CB7;
+    color: #fff;
 }
 
-.header.scrolled .btn {
+.header.scrolled .nav-buttons .btn2, .header.scrolled .nav-buttons .btn1:hover {
+    background-color: transparent;
     border-color: #000;
     color: #000;
 }
+
+.btn1 {margin-right: 15px;}
 
 .nav-links li:hover .dropdown {
     display: block; /* Ensure the dropdown appears on hover */
@@ -141,8 +151,9 @@ header {
 }
 
 /* Hero Section */
-.hero {
+.hero-container, .main-container, .login-container {
     min-height: 100vh;
+    padding-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -151,12 +162,16 @@ header {
 }
 
 .hero-content h1 {
-    font-size: 64px;
+    font-size: 56px;
+    margin-bottom: 20px;
+    padding: 0px 200px;
+}
+
+h2 {
+    font-size: 32px;
     margin-bottom: 20px;
     padding: 0px 150px;
 }
-
-.hero-content h1, .hero-content p, .hero-content a {z-index: 1;}
 
 /* Optional: If you want to blink a cursor */
 .typewriter::after {
@@ -175,34 +190,12 @@ header {
     padding: 0px 300px;
 }
 
-.btn-learn-more {
-    background-color: #007bff;
-    color: #fff;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
-}
-
-.btn-learn-more:hover {
-    background-color: #0056b3;
-}
-
 /* Footer */
 .footer {
     background-color: #000;
     padding: 20px;
     text-align: center;
     color: #fff;
-}
-
-.btn {
-    background-color: #007bff;
-    color: #fff;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 18px;
 }
 
 /* 404 Page Styles */
@@ -215,9 +208,9 @@ header {
 
 .search-container {
     margin: 20px 0px;
-    padding: 10px 20px;
+    padding: 20px;
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 100px;
     justify-content: space-between;
 }
 
@@ -228,22 +221,97 @@ header {
 
 .search-container button {
     padding: 10px 15px;
-    margin-left: 5px;
     border: none;
-    background-color: #007bff;
     color: white;
-    border-radius: 5px;
     cursor: pointer;
 }
 
 .search-container button:hover, .page-not-found .btn:hover {
-    background-color: #0056b3;
+    background-color: #000CB7;
 }
 
 /* Remove border for the search bar on focus */
 .search-input:focus {
     border: none; /* Remove the border */
     outline: none; /* Optional: Remove outline */
+}
+
+h1, h2, h3, h4, h5, h6, p, a, .btn , button, form, .search-container, .main-container {z-index: 1;}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+#loginForm {
+    width: 350px;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #fff;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 20px 15px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.password-group {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    top: 55%;
+    right: 4%;
+    cursor: pointer;
+}
+
+.fas.fa-eye, .fas.fa-eye-slash {
+    font-size: 18px;
+    color: #555;
+}
+
+.login-btn {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.remember-forgot {
+    display: flex;
+    justify-content: space-between;
+}
+
+#error-message {
+    color: red;
+    margin-top: 10px;
+    display: none;
+}
+
+.register-link {
+    margin-top: 15px;
+}
+
+.remember-forgot a, .register-link a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.remember-forgot a:hover, .register-link a:hover {
+    text-decoration: underline;
 }
 
 footer {
