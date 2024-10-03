@@ -1,21 +1,34 @@
 // JavaScript for Typewriter Effect
 const typewriter = document.querySelector('.typewriter');
-const words = ["Creativity", "Innovation", "Strategy"];
+const words = ["Tangible Results for Growth", "Creativity", "Innovation", "Strategy"];
 let index = 0;
+let isDeleting = false;
+let wordIndex = 0;
 
 function typeWord() {
-    typewriter.textContent = words[index].substring(0, typewriter.textContent.length + 1);
-    if (typewriter.textContent.length === words[index].length) {
-        setTimeout(() => {
-            index = (index + 1) % words.length;
-            setTimeout(() => {
-                typewriter.textContent = "";
-                typeWord();
-            }, 2000); // Wait for 2 seconds before deleting
-        }, 1000); // Wait for 1 second before moving to the next word
+    const currentWord = words[index];
+    
+    if (isDeleting) {
+        typewriter.textContent = currentWord.substring(0, wordIndex - 1);
+        wordIndex--;
     } else {
-        setTimeout(typeWord, 200); // Adjust typing speed
+        typewriter.textContent = currentWord.substring(0, wordIndex + 1);
+        wordIndex++;
     }
+
+    // Adjust speed
+    let typeSpeed = isDeleting ? 100 : 200;
+
+    if (!isDeleting && wordIndex === currentWord.length) {
+        setTimeout(() => {
+            isDeleting = true;
+        }, 1000); // Pause before starting to delete the word
+    } else if (isDeleting && wordIndex === 0) {
+        isDeleting = false;
+        index = (index + 1) % words.length;
+    }
+
+    setTimeout(typeWord, typeSpeed);
 }
 
 // Start the typewriter effect
