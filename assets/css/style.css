@@ -139,7 +139,7 @@ body {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -201,18 +201,24 @@ body {
 }
 
 /* 404 Page Styles */
-.hero-content h1 {
+.page-not-found h1 {
     font-size: 64px;
+    margin-bottom: 20px;
+    padding: 0px 150px;
+    color: red;
 }
 
 .search-container {
-    margin-top: 20px;
+    margin: 20px 0px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    justify-content: space-between;
 }
 
 .search-container input[type="text"] {
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: none;
 }
 
 .search-container button {
@@ -225,6 +231,12 @@ body {
     cursor: pointer;
 }
 
-.search-container button:hover {
+.search-container button:hover, .page-not-found .btn:hover {
     background-color: #0056b3;
+}
+
+/* Remove border for the search bar on focus */
+.search-input:focus {
+    border: none; /* Remove the border */
+    outline: none; /* Optional: Remove outline */
 }
