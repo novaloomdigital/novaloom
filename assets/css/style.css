@@ -156,6 +156,8 @@ header {
     padding: 0px 150px;
 }
 
+.hero-content h1, .hero-content p, .hero-content a {z-index: 1;}
+
 /* Optional: If you want to blink a cursor */
 .typewriter::after {
     content: '|';

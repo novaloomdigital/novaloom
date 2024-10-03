@@ -58,7 +58,7 @@
 
 <main>
     <!-- Main Section -->
-    <section class="hero">
+    <section class="hero" id="particles-js-background">
         <div class="hero-content cmw">
             <h1>Strategic Thinking, <span class="typewriter"></span></h1>
             <p>Novaloom transforms digital ambitions into reality with cutting-edge SEO, powerful digital marketing, and expert web development.</p>
@@ -76,5 +76,17 @@
 
 <!-- JavaScript File -->
 <script type="text/javascript" src="assets/js/script.js"></script>
+<!-- To Show Particle in Background -->
+<style>
+    .particles-js-canvas-el {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left:0;
+    }
+</style>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script type="text/javascript" src="assets/js/particles.js"></script>
 </body>
 </html>
