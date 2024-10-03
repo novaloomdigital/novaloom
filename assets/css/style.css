@@ -1,26 +1,20 @@
 * {margin: 0; padding: 0; box-sizing: border-box;}
 
-body {font-family: 'Inter', sans-serif; background-color: #0F0F11; color: #C9C9C9;}
+body {font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 400; line-height: 1.5; letter-spacing: 0.02em; background-color: #0F0F11; color: #C9C9C9;}
 
 .btn1 {background-color: #000CB7; border: #000CB7; color: #ffffff;}
 .btn1:hover {background-color: #00087D; border: #00087D;}
-
 .btn2 {background-color: transparent; color: #ffffff; border: #ffffff;}
 .btn2:hover {background-color: #ffffff; color: #151515;}
-
 .btnns {border-radius: 50px; padding: 14px 28px; font-size: 16px; font-weight: 400; font-family: 'Inter';}
-
 .btnls {border-radius: 50px; padding: 14px 28px; font-size: 20px; font-weight: 400; font-family: 'Inter';}
-
 .btnm {margin-right: 15px;}
 
 h1, h2, h3, h4, h5, h6 {font-family: 'Inter', sans-serif;}
-
-h1 {font-size: 56px; font-weight: bold;}
-h2 {font-size: 48px; font-weight: bold;}
-h3 {font-size: 42px; font-weight: 700;}
-h4 {font-size: 36px; font-weight: 700;}
-h5 {font-size: 30px; font-weight: 500;}
-h6 {font-size: 24px; font-weight: 300;}
-p {font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 400;}
-.sm {font-family: 'Space Mono', sans-serif; font-size: 12px; font-weight: 400;}
+h1 {font-size: 48px; font-weight: 700; line-height: 1.3; letter-spacing: 0em;}
+h2 {font-size: 40px; font-weight: 700; line-height: 1.3; letter-spacing: 0em;}
+h3 {font-size: 32px; font-weight: 600; line-height: 1.3; letter-spacing: 0em;}
+h4 {font-size: 24px; font-weight: 600; line-height: 1.4; letter-spacing: 0em;}
+h5 {font-size: 20px; font-weight: 500; line-height: 1.4; letter-spacing: 0em;}
+h6 {font-size: 18px; font-weight: 500; line-height: 1.4; letter-spacing: 0em;}
+.sm {font-size: 12px;}
