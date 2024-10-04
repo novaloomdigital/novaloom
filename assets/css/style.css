@@ -2,13 +2,15 @@
 
 body {font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 400; line-height: 1.5; letter-spacing: 0.02em; background-color: #0F0F11; color: #C9C9C9;}
 
-.btn1 {background-color: #000CB7; border-color: #000CB7; color: #ffffff;}
-.btn1:hover {background-color: #00087D; border-color: #00087D; color: #ffffff;}
-.btn2 {background-color: transparent; color: #ffffff; border-color: #ffffff;}
-.btn2:hover {background-color: #ffffff; color: #151515; border-color: #ffffff;}
+.btn1 {background-color: #000CB7; border: 2px solid; border-color: #000CB7; color: #ffffff;}
+.btn1:hover, .btn1 a:hover {background-color: #00087D; border: 2px solid; border-color: #00087D; color: #ffffff;}
+.btn2 {background-color: transparent; color: #ffffff; border: 2px solid; border-color: #ffffff;}
+.btn2:hover {background-color: #ffffff; color: #151515; border: 2px solid; border-color: #ffffff;}
 .btnns {border-radius: 50px; padding: 10px 20px; font-size: 16px; font-weight: 400; font-family: 'Inter';}
 .btnls {border-radius: 50px; padding: 14px 28px; font-size: 20px; font-weight: 400; font-family: 'Inter';}
 .btnm {margin-right: 15px;}
+.text-end a, .hero-content a {text-decoration: none;}
+.text-end a:hover, .hero-content a:hover {text-decoration: none;}
 
 h1, h2, h3, h4, h5, h6 {font-family: 'Inter', sans-serif;}
 h1 {font-size: 48px; font-weight: 700; line-height: 1.3; letter-spacing: 0em;}
@@ -18,3 +20,59 @@ h4 {font-size: 24px; font-weight: 600; line-height: 1.4; letter-spacing: 0em;}
 h5 {font-size: 20px; font-weight: 500; line-height: 1.4; letter-spacing: 0em;}
 h6 {font-size: 18px; font-weight: 500; line-height: 1.4; letter-spacing: 0em;}
 .sm {font-size: 12px;}
+h1, h2, h3, h4, h5, h6, p, a, .btn , button, form, .search-container, .main-container, .reset-container {z-index: 1;}
+
+.header {position: fixed; top: 0;width: 100%; z-index: 1000; transition: background-color 0.3s ease, color 0.3s ease; background-color: transparent;}
+.navlink {color: white; font-weight: 600;}
+.navlink:hover {cursor: pointer; color: #000CB7;}
+.footer {background-color: #0F0F11; padding: 25px; margin-top: 50px; width: 100%; z-index: 1000;}
+.header.scrolled {background-color: rgb(255, 255, 255); transition: background-color 0.5s ease-in;}
+.header.scrolled .btn2 {background-color: transparent; color: #151515; border: 2px solid; border-color: #151515;}
+.header.scrolled .btn2:hover {background-color: #151515; color: #ffffff; border: 2px solid; border-color: #151515;}
+.header.scrolled .navlink {color: #151515;}
+.header.scrolled .navlink:hover {cursor: pointer; color: #00087D;}
+
+.cmw {max-width: 1400px; margin: 0 auto; display: flex; flex-direction: column; align-items: center;}
+
+.navbar, .bf {display: flex; padding: 15px 30px; width: 100%;}
+.sb {background-color: #ffffff;}
+
+/* Hero Section */
+.hero-container, .main-container, .login-container, .reset-container {
+    min-height: 100vh;
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #000;
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    margin-bottom: 20px;
+    padding: 0px 200px;
+}
+
+.hero-content h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    padding: 0px 150px;
+}
+
+/* Optional: If you want to blink a cursor */
+.typewriter::after {
+    content: '|';
+    display: inline-block;
+    animation: blink 0.75s step-start infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    padding: 0px 300px;
+}

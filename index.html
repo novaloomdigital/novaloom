@@ -8,34 +8,63 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<header class="p-3 text-bg-dark">
-    <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-            <img src="assets/images/novaloom-logo.png" alt="novaloom logo" style="width: 175px;">
-        </a>
+<header class="header">
+    <div class="cmv">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start navbar">
+            <a href="/"><img src="assets/images/novaloom-logo.png" alt="novaloom logo" style="width: 175px; margin-top: -10px; margin-right: 15px;"></a>
 
-        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">About</a></li>
-        </ul>
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                <li><a href="/" class="nav-link px-2 navlink">Home</a></li>
+                <li><a href="#" class="nav-link px-2 navlink">Features</a></li>
+                <li><a href="#" class="nav-link px-2 navlink">Pricing</a></li>
+                <li><a href="#" class="nav-link px-2 navlink">FAQs</a></li>
+                <li><a href="#" class="nav-link px-2 navlink">About</a></li>
+            </ul>
+            
+            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+                <input type="search" class="form-control form-control-light sb" placeholder="Search..." aria-label="Search">
+            </form>
 
-        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-            <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
-        </form>
-
-        <div class="text-end">
-            <button type="button" class="btn btn-outline-light me-2 btn1 btnns">Login</button>
-            <button type="button" class="btn btn-warning btn2 btnns">Sign-up</button>
-        </div>
+            <div class="text-end">
+                <a href="login.html" class="btn1 btnns btnnm">Login</a>
+                <a href="register.html" class="btn2 btnns">Sign Up</a>
+            </div>
         </div>
     </div>
 </header>
 
+<main>
+    <!-- Main Section -->
+    <section class="hero-container" id="particles-js-background">
+        <div class="hero-content cmw">
+            <h1 style="color: white;">Welcome To NOVALOOM</h1>
+            <h2 style="color: white;"><span class="typewriter"></span></h2>
+            <p style="color: white;">Transform your online presence with our expert monetization solutions tailored for publishers. At Novaloom, we don’t just help you generate income; we provide comprehensive digital services to elevate your brand.</p>
+            <a href="#" class="btn1 btnls">Learn More</a>
+        </div>
+    </section>
+</main>
 
+<!-- Footer -->
+<footer class="footer">
+    <div class="bf cmw">
+        <p>&copy; 2024 Novaloom. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<!-- To Show Particle in Background -->
+<style>
+    .particles-js-canvas-el {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left:0;
+    }
+</style>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<script type="text/javascript" src="assets/js/particles.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="assets/js/script.js"></script>
 </body>
 </html>
