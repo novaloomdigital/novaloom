@@ -1,6 +1,6 @@
 * {margin: 0; padding: 0; box-sizing: border-box;}
 
-body {font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 400; line-height: 1.5; letter-spacing: 0.02em; background-color: #0F0F11; color: #C9C9C9;}
+body {font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 400; line-height: 1.5; letter-spacing: 0.02em; background-color: #0F0F11; color: #ffffff;}
 
 .btn1 {background-color: #000CB7; border: 2px solid; border-color: #000CB7; color: #ffffff;}
 .btn1:hover, .btn1 a:hover {background-color: #00087D; border: 2px solid; border-color: #00087D; color: #ffffff;}
@@ -20,7 +20,7 @@ h4 {font-size: 24px; font-weight: 600; line-height: 1.4; letter-spacing: 0em;}
 h5 {font-size: 20px; font-weight: 500; line-height: 1.4; letter-spacing: 0em;}
 h6 {font-size: 18px; font-weight: 500; line-height: 1.4; letter-spacing: 0em;}
 .sm {font-size: 12px;}
-h1, h2, h3, h4, h5, h6, p, a, .btn , button, form, .search-container, .main-container, .reset-container {z-index: 1;}
+h1, h2, h3, h4, h5, h6, p, a, .btn1, .btn2, .text-end, .header,x button, form, .search-container, .main-container, .reset-container {z-index: 1;}
 
 .header {position: fixed; top: 0;width: 100%; z-index: 1000; transition: background-color 0.3s ease, color 0.3s ease; background-color: transparent;}
 .navlink {color: white; font-weight: 600;}
@@ -38,14 +38,13 @@ h1, h2, h3, h4, h5, h6, p, a, .btn , button, form, .search-container, .main-cont
 .sb {background-color: #ffffff;}
 
 /* Hero Section */
-.hero-container, .main-container, .login-container, .reset-container {
+.hero-container {
     min-height: 100vh;
     padding-top: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #000;
 }
 
 .hero-content h1 {
@@ -60,6 +59,7 @@ h1, h2, h3, h4, h5, h6, p, a, .btn , button, form, .search-container, .main-cont
     padding: 0px 150px;
 }
 
+.typewriter {background-image: linear-gradient(transparent, transparent, #000CB7);}
 /* Optional: If you want to blink a cursor */
 .typewriter::after {
     content: '|';
@@ -76,3 +76,41 @@ h1, h2, h3, h4, h5, h6, p, a, .btn , button, form, .search-container, .main-cont
     margin-bottom: 40px;
     padding: 0px 300px;
 }
+
+.login-container, .reset-container {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-content: center;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#loginForm, #reset-form {width: 350px;}
+.input-group {margin-bottom: 15px; text-align: left; color: #ffffff;}
+.input-group label, .input-group label input {font-size: 14px; color: #fff;}
+
+.input-group input {
+    width: 100%;
+    padding: 20px 15px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.password-group {position: relative;}
+.toggle-password {position: absolute; top: 55%; right: 4%; cursor: pointer;}
+.bi.bi-eye, .bi.bi-eye-slash {font-size: 18px; color: #111;}
+.login-btn, .pass-reset {width: 100%; margin-top: 15px;}
+.remember-forgot {display: flex; justify-content: space-between;}
+.reset-container .toogle-password {justify-content: left; justify-items: left; align-items: start;}
+#error-message {color: red; margin-top: 10px; display: none;}
+.register-link {margin-top: 15px; color: #ffffff;}
+.remember-forgot a, .register-link a {text-decoration: none; color: #fff;}
+.remember-forgot a:hover, .register-link a:hover {text-decoration: underline;}
+
+/* Reset Form with OTP Verification */
+.form-step {display: none;}
+.form-step.active {display: block;}

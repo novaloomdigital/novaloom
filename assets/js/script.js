@@ -48,3 +48,88 @@ function typeWord() {
 
 // Start the typewriter effect
 typeWord();
+
+// Toggle password visibility
+function togglePassword() {
+    const passwordField = document.getElementById('password');
+    const eyeIcon = document.getElementById('eyeIcon');
+    const isPasswordVisible = passwordField.type === 'text';
+    passwordField.type = isPasswordVisible ? 'password' : 'text';
+    eyeIcon.classList.toggle('bi-eye', isPasswordVisible);
+    eyeIcon.classList.toggle('bi-eye-slash', !isPasswordVisible);
+}
+
+document.getElementById("password-reset-form").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const newPassword = document.getElementById("newPassword").value;
+    const confirmPassword = document.getElementById("confirmPassword").value;
+    const passwordError = document.getElementById("passwordError");
+
+    // Password validation
+    if (newPassword.length < 8) {
+        passwordError.textContent = "Password must be at least 8 characters long.";
+    } else if (!/[A-Z]/.test(newPassword)) {
+        passwordError.textContent = "Password must contain at least one uppercase letter.";
+    } else if (!/[a-z]/.test(newPassword)) {
+        passwordError.textContent = "Password must contain at least one lowercase letter.";
+    } else if (!/[0-9]/.test(newPassword)) {
+        passwordError.textContent = "Password must contain at least one number.";
+    } else if (newPassword !== confirmPassword) {
+        passwordError.textContent = "Passwords do not match.";
+    } else {
+        passwordError.textContent = "";
+        alert("Password reset successful!");
+        // Here you can send the data to the server
+    }
+});
+
+// Step Form of Password Reset Page with OTP Verification
+let currentStep = 1;
+function nextStep(step) {
+    const steps = document.querySelectorAll('.form-step');
+    // Move to next step
+    steps[step - 1].classList.remove('active');
+    steps[step].classList.add('active');
+}
+
+function validatePassword() {
+    const password = document.getElementById("new-password").value;
+    const confirmPassword = document.getElementById("confirm-password").value;
+
+    if (password !== confirmPassword) {
+        document.getElementById("password-error").textContent = "Passwords do not match!";
+        return false;
+    } else if (password.length < 8) {
+        document.getElementById("password-error").textContent = "Password must be at least 8 characters long!";
+        return false;
+    }
+
+    document.getElementById("password-error").textContent = "";
+    return true;
+}
+
+function submitForm() {
+    if (validatePassword()) {
+        alert("Password reset successfully!");
+        document.getElementById("password-reset-form").reset();
+        // You can add AJAX call or form submission logic here
+    }
+}
+
+// Function to toggle both password fields' visibility
+function toggleBothPasswords() {
+    const newPasswordField = document.getElementById('new-password');
+    const confirmPasswordField = document.getElementById('confirm-password');
+    const eyeIcon1 = document.getElementById('eyeIcon1');
+    const eyeIcon2 = document.getElementById('eyeIcon2');
+    const isPasswordVisible = newPasswordField.type === 'text';
+    // Toggle both password fields simultaneously
+    newPasswordField.type = isPasswordVisible ? 'password' : 'text';
+    confirmPasswordField.type = isPasswordVisible ? 'password' : 'text';
+    // Toggle the icon for both fields
+    eyeIcon1.classList.toggle('bi-eye', isPasswordVisible);
+    eyeIcon1.classList.toggle('bi-eye-slash', !isPasswordVisible);
+    eyeIcon2.classList.toggle('bi-eye', isPasswordVisible);
+    eyeIcon2.classList.toggle('bi-eye-slash', !isPasswordVisible);
+}
