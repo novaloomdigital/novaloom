@@ -10,7 +10,6 @@
     <style>
         .ddm, .result .ddm {width: 100%; display: flex; flex-direction: column; margin-top: 15px;}
         select {margin-top: 5px; padding: 20px 15px; width: 100%;}
-        .result {display: none;}
     </style>
 </head>
 <body>
@@ -18,61 +17,6 @@
 <section class="register-container" id="particles-js-background">
     <h2 style="color: white">Create Your Account</h2>
     <form id="register-form" onsubmit="return validateForm()">
-        <!-- Step 1: Name & Username -->
-        <div id="step-1" class="form-step active">
-            <div class="input-group">
-                <label for="Name">Enter your Name:</label>
-                <div class="input-group row-con">
-                    <input type="text" id="FirstName" name="FirstName" placeholder="First Name" required/>
-                    <input type="text" id="SecondName" name="SecondName" placeholder="Second Name" required/>
-                </div>
-            </div>
-            <div class="input-group">
-                <label for="username">Enter your Username:</label>
-                <input type="text" id="username" name="username" placeholder="Username" required/>
-            </div>
-            <div class="input-group"><button type="button" onclick="nextStep(1)" class="btn1 btnls signup">Next</button></div>
-        </div>
-
-        <!-- Step 2: Address Details -->
-        <div id="step-2" class="form-step">
-            <div class="input-group">
-                <label for="StreetAddress">Street Address:</label>
-                <input type="text" id="StreetAddress" name="StreetAddress" placeholder="e.g. Wallabay Way" required/>
-            </div>
-            <div class="input-group">
-                <label for="ApartmentSuite">Apartment, Suite, etc.:</label>
-                <input type="text" id="ApartmentSuite" name="ApartmentSuite" placeholder="e.g. 85 Highway"/>
-            </div>
-            <div class="input-group row-con">
-                <div style="display: flex; flex-direction: row; width: 100%; justify-content: space-between;">
-                    <div style="display: flex; flex-direction: column; width: 48%">
-                        <label for="city">City:</label>
-                        <input style="width: 100%" type="text" id="city" name="city" placeholder="e.g. Sydney" required/>
-                    </div>
-                    <div style="display: flex; flex-direction: column; width: 48%">
-                        <label for="state">State/Province:</label>
-                        <input style="width: 100%" type="text" id="state" name="city" placeholder="e.g. New South Wales"/>
-                    </div>
-                </div>
-            </div>
-            <div class="input-group row-con">
-                <div style="display: flex; flex-direction: row; width: 100%; justify-content: space-between;">
-                    <div style="display: flex; flex-direction: column; width: 48%">
-                        <label for="ZIPcode">ZIP/Postal Code:</label>
-                        <input style="width: 100%" type="text" id="ZIPcode" name="ZIPcode" placeholder="e.g. 20000" required/>
-                    </div>
-                    <div style="display: flex; flex-direction: column; width: 48%">
-                        <label for="country">Country:</label>
-                        <input style="width: 100%;" type="text" id="country" name="country" placeholder="e.g. United States">
-                    </div>
-                </div>
-            </div>
-            <div class="input-group row-con">
-                <button type="button" onclick="prevStep(1)" class="btn1 btnls pass-reset">Back</button>
-                <button type="button" onclick="nextStep(2)" class="btn1 btnls signup">Next</button>
-            </div>
-        </div>
 
         <!-- Step 3: App/Game/Website -->
         <div id="step-3" class="form-step">
@@ -85,7 +29,7 @@
                         <option value="App/Game">App/Game Monetization</option>
                     </select>
                 </div>
-                <div class="result ddm" id="AppGameOptions">
+                <div class="result ddm" id="AppGameOptions" style="display: none;">
                     <label for="Android/iOS">Android or iOS App/Game Monetization:</label>
                     <select name="Android/iOS" id="Android/iOS">
                         <option value="" selected disabled>-- Select an Option --</option>
@@ -94,10 +38,7 @@
                     </select>
                 </div>
             </div>
-            <div class="input-group row-con">
-                <button type="button" onclick="prevStep(2)" class="btn1 btnls pass-reset">Back</button>
-                <button type="button" onclick="nextStep(3)" class="btn1 btnls signup">Next</button>
-            </div>
+            <div class="input-group"><button type="button" onclick="nextStep(3)" class="btn1 btnls signup">Next</button></div>
         </div>
 
         <!-- Step 4: Website/App Url -->
@@ -107,7 +48,7 @@
                     <label for="WebsiteLink">Website URL:</label>
                     <input type="url" id="WebsiteLink" name="WebsiteLink" placeholder="example.com" required/>
                 </div>
-                <div class="result ddm" id="AppGameDetails">
+                <div class="result ddm" id="AppGameDetails" style="display: none;">
                     <label for="App/GameName">App or Game Name:</label>
                     <input type="text" name="App/GameName" id="App/GameName" placeholder="e.g. Youtube" required/>
                     <label for="App/GameLink" style="margin-top: 15px;">App or Game URL</label>
@@ -116,10 +57,7 @@
                     <input type="text" name="App/GameAppID" id="App/GameAppID" placeholder="Enter App ID" required/>
                 </div>
             </div>
-            <div class="input-group row-con">
-                <button type="button" onclick="prevStep(3)" class="btn1 btnls pass-reset">Back</button>
-                <button type="button" onclick="nextStep(4)" class="btn1 btnls signup">Next</button>
-            </div>
+            <div class="input-group"><button type="button" onclick="nextStep(4)" class="btn1 btnls signup">Next</button></div>
         </div>
 
         <!-- Step 5: Approval Status -->
@@ -134,7 +72,7 @@
                         <option value="Disabled">Disabled</option>
                     </select>
                 </div>
-                <div class="result ddm" id="AdSenseIssues">
+                <div class="result ddm" id="AdSenseIssues" style="display: none;">
                     <label for="AdSenseApprovalIssue">AdSense Approval Issue:</label>
                     <select name="AdSenseApprovalIssue" id="AdSenseApprovalIssue">
                         <option value="" selected disabled>-- Select an Option --</option>
@@ -152,7 +90,7 @@
                         <option value="Disabled">Disabled</option>
                     </select>
                 </div>
-                <div class="result ddm" id="AdMobIssues">
+                <div class="result ddm" id="AdMobIssues" style="display: none;">
                     <label for="AdMobApprovalIssue">AdMob Approval Issue:</label>
                     <input type="text" name="AAI" id="AAI" placeholder="Type Your Approval Issues">
                 </div>
@@ -161,10 +99,7 @@
                     <input type="text" name="MFOP" id="MFOP" placeholder="e.g Adsterra, Monetag etc.">
                 </div>
             </div>
-            <div class="input-group row-con">
-                <button type="button" onclick="prevStep(4)" class="btn1 btnls pass-reset">Back</button>
-                <button type="button" onclick="nextStep(5)" class="btn1 btnls signup">Next</button>
-            </div>
+            <div class="input-group"><button type="button" onclick="nextStep(5)" class="btn1 btnls signup">Next</button></div>
         </div>
 
         <!-- Step 6: Users Data -->
@@ -172,7 +107,7 @@
             <div class="input-group">
                 <div class="result ddm" id="MV">
                     <label for="MV">Monthly Visitors:</label>
-                    <select name="MV" id="MVW">
+                    <select name="MV" id="MV">
                         <option value="" selected disabled>-- Select an Option --</option>
                         <option value="<5k">Less Than 5k</option>
                         <option value="5k-15k">5k - 15k</option>
@@ -187,9 +122,9 @@
                         <option value=">1M">More Than 1M</option>
                     </select>
                 </div>
-                <div class="result ddm" id="MAU">
+                <div class="result ddm" id="MAU" style="display: none;">
                     <label for="MAU">Monthly Active Users:</label>
-                    <select name="MAU" id="MAUA">
+                    <select name="MAU" id="MAU">
                         <option value="" selected disabled>-- Select an Option --</option>
                         <option value="<1k">Less Than 1k</option>
                         <option value="1k-2.5k">1k - 2.5k</option>
@@ -205,10 +140,7 @@
                     </select>
                 </div>
             </div>
-            <div class="input-group row-con">
-                <button type="button" onclick="prevStep(5)" class="btn1 btnls pass-reset">Back</button>
-                <button type="button" onclick="nextStep(6)" class="btn1 btnls signup">Next</button>
-            </div>
+            <div class="input-group"><button type="button" onclick="nextStep(6)" class="btn1 btnls signup">Next</button></div>
         </div>
 
         <!-- Step 7: Contact Information -->
@@ -225,10 +157,7 @@
                 <label for="WhatsApp">Enter Your WhatsApp No.:</label>
                 <input type="tel" id="WhatsApp" name="WhatsApp" placeholder="+1 (957) 462-9353">
             </div>
-            <div class="input-group row-con">
-                <button type="button" onclick="prevStep(6)" class="btn1 btnls pass-reset">Back</button>
-                <button type="button" onclick="nextStep(7)" class="btn1 btnls signup">Next</button>
-            </div>
+            <div class="input-group"><button type="button" onclick="nextStep(7)" class="btn1 btnls signup">Next</button></div>
         </div>
 
         <!-- Step 8: Set New Password -->
@@ -244,10 +173,7 @@
                 <span class="toggle-password" onclick="toggleBothPasswords()"><i id="eyeIcon2" class="bi bi-eye"></i></span>
             </div>
             <span id="passwordError" class="error-message"></span>
-            <div class="input-group row-con">
-                <button type="button" onclick="prevStep(7)" class="btn1 btnls pass-reset">Back</button>
-                <button type="submit" class="btn1 btnls signup">Register</button>
-            </div>
+            <div class="input-group"><button type="submit" class="btn1 btnls signup">Register</button></div>
         </div>
     </form>
 </section>
@@ -267,52 +193,5 @@
 <script type="text/javascript" src="assets/js/particles.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="assets/js/script.js"></script>
-<script>
-    function showMonetizationOptions() {
-        const selector = document.getElementById("selector").value;
-        const AdSApp = document.getElementById("AdSenseApproval").value;
-        const AdMApp = document.getElementById("AdMobApproval").value;
-        const AppGameOptions = document.getElementById("AppGameOptions");
-        const Website = document.getElementById("Website");
-        const AppApproval = document.getElementById("AppApproval");
-
-        if (selector === "App/Game") {
-            AppGameOptions.style.display = "block";
-            AppGameDetails.style.display = "block";
-            Website.style.display = "none";
-            AppApproval.style.display = "block";
-            WebsiteApproval.style.display = "none";
-            AdMobIssues.style.display = "block";
-            AdSenseIssues.style.display = "none";
-            MAU.style.display = "block";
-            MV.style.display = "none";
-        } else {
-            AppGameOptions.style.display = "none";
-            AppGameDetails.style.display = "none";
-            Website.style.display = "block";
-            AppApproval.style.display = "none";
-            WebsiteApproval.style.display = "block";
-            AdMobIssues.style.display = "none";
-            AdSenseIssues.style.display = "block";
-            MAU.style.display = "none";
-            MV.style.display = "block";
-        }
-
-        if (AdSApp === "NA") {AdSenseIssues.style.display = "block";} else {AdMobIssues.style.display = "none";}
-        if (AdMApp === "Not") {AdMobIssues.style.display = "block";} else {AdSenseIssues.style.display = "none";}
-    }
-
-    function showAdSenseIssues() {
-        const status = document.getElementById("AdSenseApproval").value;
-        const AdSenseIssues = document.getElementById("AdSenseIssues");
-        AdSenseIssues.style.display = status === "NA" ? "block" : "none";
-    }
-
-    function showAdMobIssues() {
-        const status = document.getElementById("AdMobApproval").value;
-        const AdMobIssues = document.getElementById("AdMobIssues");
-        AdMobIssues.style.display = status === "Not" ? "block" : "none";
-    }
-</script>
 </body>
 </html>

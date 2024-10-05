@@ -77,7 +77,7 @@ h1, h2, h3, h4, h5, h6, p, a, .btn1, .btn2, .text-end, .header,x button, form, .
     padding: 0px 300px;
 }
 
-.login-container, .reset-container {
+.login-container, .reset-container, .register-container {
     display: flex;
     flex-direction: column;
     padding: 20px;
@@ -87,11 +87,13 @@ h1, h2, h3, h4, h5, h6, p, a, .btn1, .btn2, .text-end, .header,x button, form, .
     align-items: center;
     text-align: center;
 }
+.row-con {display: flex; flex-direction: row; justify-content: space-between;}
 
-#loginForm, #reset-form {width: 350px;}
+#loginForm, #reset-form, #register-form {width: 500px;}
 .input-group {margin-bottom: 15px; text-align: left; color: #ffffff;}
 .input-group label, .input-group label input {font-size: 14px; color: #fff;}
 
+.remember-forgot a:hover, .register-link a:hover {text-decoration: underline;}
 .input-group input {
     width: 100%;
     padding: 20px 15px;
@@ -99,17 +101,19 @@ h1, h2, h3, h4, h5, h6, p, a, .btn1, .btn2, .text-end, .header,x button, form, .
     border: 1px solid #ccc;
     border-radius: 4px;
 }
+.row-con input, .row-con button {width: 48%;}
 
 .password-group {position: relative;}
 .toggle-password {position: absolute; top: 55%; right: 4%; cursor: pointer;}
 .bi.bi-eye, .bi.bi-eye-slash {font-size: 18px; color: #111;}
-.login-btn, .pass-reset {width: 100%; margin-top: 15px;}
+.login-btn, .pass-reset, .signup {width: 100%; margin-top: 15px;}
 .remember-forgot {display: flex; justify-content: space-between;}
 .reset-container .toogle-password {justify-content: left; justify-items: left; align-items: start;}
 #error-message {color: red; margin-top: 10px; display: none;}
 .register-link {margin-top: 15px; color: #ffffff;}
 .remember-forgot a, .register-link a {text-decoration: none; color: #fff;}
 .remember-forgot a:hover, .register-link a:hover {text-decoration: underline;}
+.dropdown-toggle.btn-default {color: #292b2c; background-color: #fff; border-color: #ccc;}
 
 /* Reset Form with OTP Verification */
 .form-step {display: none;}

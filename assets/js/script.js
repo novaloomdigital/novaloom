@@ -86,11 +86,17 @@ document.getElementById("password-reset-form").addEventListener("submit", functi
 
 // Step Form of Password Reset Page with OTP Verification
 let currentStep = 1;
+
 function nextStep(step) {
     const steps = document.querySelectorAll('.form-step');
-    // Move to next step
     steps[step - 1].classList.remove('active');
     steps[step].classList.add('active');
+}
+
+function prevStep(step) {
+    const steps = document.querySelectorAll('.form-step');
+    steps[step].classList.remove('active');
+    steps[step - 1].classList.add('active');
 }
 
 function validatePassword() {

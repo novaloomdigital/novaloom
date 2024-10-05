@@ -231,8 +231,24 @@
             </div>
         </div>
 
-        <!-- Step 8: Set New Password -->
+        <!-- Step 8: OTP Verification -->
         <div id="step-8" class="form-step">
+            <div class="input-group">
+                <label for="MailOTP">Enter Your Mail OTP</label>
+                <input type="text" id="MailOTP" name="MailOTP" placeholder="Enter Your OTP Here">
+            </div>
+            <div class="input-group">
+                <label for="NumOTP">Enter Your Number OTP</label>
+                <input type="text" id="NumOTP" name="NumOTP" placeholder="Enter Your OTP Here">
+            </div>
+            <div class="input-group row-con">
+                <button type="button" onclick="prevStep(7)" class="btn1 btnls pass-reset">Back</button>
+                <button type="button" onclick="nextStep(8)" class="btn1 btnls signup">Verify</button>
+            </div>
+        </div>
+
+        <!-- Step 9: Set New Password -->
+        <div id="step-9" class="form-step">
             <div class="input-group">
                 <label for="newPassword">Password:</label>
                 <input type="password" id="new-password" name="newPassword" placeholder="Enter New Password" required/>
@@ -245,7 +261,7 @@
             </div>
             <span id="passwordError" class="error-message"></span>
             <div class="input-group row-con">
-                <button type="button" onclick="prevStep(7)" class="btn1 btnls pass-reset">Back</button>
+                <button type="button" onclick="prevStep(8)" class="btn1 btnls pass-reset">Back</button>
                 <button type="submit" class="btn1 btnls signup">Register</button>
             </div>
         </div>
