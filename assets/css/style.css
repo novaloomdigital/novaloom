@@ -1,11 +1,13 @@
 * {margin: 0; padding: 0; box-sizing: border-box;}
 
-body {font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 400; line-height: 1.5; letter-spacing: 0.02em; background-color: #0F0F11; color: #ffffff;}
+body {font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 400; line-height: 1.5; letter-spacing: 0.02em; background-color: #ffffff; color: #0F0F11;}
 
 .btn1 {background-color: #000CB7; border: 2px solid; border-color: #000CB7; color: #ffffff;}
 .btn1:hover, .btn1 a:hover {background-color: #00087D; border: 2px solid; border-color: #00087D; color: #ffffff;}
-.btn2 {background-color: transparent; color: #ffffff; border: 2px solid; border-color: #ffffff;}
-.btn2:hover {background-color: #ffffff; color: #151515; border: 2px solid; border-color: #ffffff;}
+.btn2l {background-color: transparent; color: #ffffff; border: 2px solid; border-color: #ffffff;}
+.btn2l:hover {background-color: #ffffff; color: #151515; border: 2px solid; border-color: #ffffff;}
+.btn2d {background-color: transparent; color: #151515; border: 2px solid; border-color: #151515;}
+.btn2d:hover {background-color: #151515; color: #ffffff; border: 2px solid; border-color: #151515;}
 .btnns {border-radius: 50px; padding: 10px 20px; font-size: 16px; font-weight: 400; font-family: 'Inter';}
 .btnls {border-radius: 50px; padding: 14px 28px; font-size: 20px; font-weight: 400; font-family: 'Inter';}
 .btnm {margin-right: 15px;}
@@ -25,10 +27,10 @@ h1, h2, h3, h4, h5, h6, p, a, .btn1, .btn2, .text-end, .header,x button, form, .
 .header {position: fixed; top: 0;width: 100%; z-index: 1000; transition: background-color 0.3s ease, color 0.3s ease; background-color: transparent;}
 .navlink {color: white; font-weight: 600;}
 .navlink:hover {cursor: pointer; color: #000CB7;}
-.footer {background-color: #0F0F11; padding: 25px; margin-top: 50px; width: 100%; z-index: 1000;}
+.footer {background-color: #0F0F11; padding: 15px 30px; margin-top: 100px; width: 100%; z-index: 1000;}
 .header.scrolled {background-color: rgb(255, 255, 255); transition: background-color 0.5s ease-in;}
-.header.scrolled .btn2 {background-color: transparent; color: #151515; border: 2px solid; border-color: #151515;}
-.header.scrolled .btn2:hover {background-color: #151515; color: #ffffff; border: 2px solid; border-color: #151515;}
+.header.scrolled .btn2l {background-color: transparent; color: #151515; border: 2px solid; border-color: #151515;}
+.header.scrolled .btn2l:hover {background-color: #151515; color: #ffffff; border: 2px solid; border-color: #151515;}
 .header.scrolled .navlink {color: #151515;}
 .header.scrolled .navlink:hover {cursor: pointer; color: #00087D;}
 
@@ -36,11 +38,15 @@ h1, h2, h3, h4, h5, h6, p, a, .btn1, .btn2, .text-end, .header,x button, form, .
 
 .navbar, .bf {display: flex; padding: 15px 30px; width: 100%;}
 .sb {background-color: #ffffff;}
+.bf {display: flex; flex-direction: column}
+.nav-item a {color: #ffffff; text-decoration: none;}
 
 /* Hero Section */
 .hero-container {
-    min-height: 100vh;
-    padding-top: 100px;
+    min-height: 641px;
+    padding-top: 150px;
+    padding-bottom: 100px;
+    background-color: #0F0F11;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -86,8 +92,12 @@ h1, h2, h3, h4, h5, h6, p, a, .btn1, .btn2, .text-end, .header,x button, form, .
     justify-content: center;
     align-items: center;
     text-align: center;
+    background-color: #0F0F11;
 }
-.row-con {display: flex; flex-direction: row; justify-content: space-between;}
+.row-con {display: flex; flex-direction: row; justify-content: space-between; width: 100%;}
+.row-con-f {display: flex; flex-direction: row; justify-content: space-between; width: 100%;}
+.si a i {font-size: 20px; color: #ffffff;}
+.si a i:hover {color: #00087D;}
 
 #loginForm, #reset-form, #register-form {width: 500px;}
 .input-group {margin-bottom: 15px; text-align: left; color: #ffffff;}
@@ -118,3 +128,8 @@ h1, h2, h3, h4, h5, h6, p, a, .btn1, .btn2, .text-end, .header,x button, form, .
 /* Reset Form with OTP Verification */
 .form-step {display: none;}
 .form-step.active {display: block;}
+
+.search-container {padding: 15px 10px; background-color: #fff; border-radius: 100px; width: 100%; align-content: space-between;}
+.search-container input[type="text"] {padding: 10px; border: none;}
+/* Remove border for the search bar on focus */
+.search-input:focus {border: none; outline: none;}
